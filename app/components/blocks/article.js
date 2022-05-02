@@ -82,7 +82,7 @@ export const Article = ({ article, category }) => html`
                 ${article.title}
             </a>
         </h2>
-        <p class="description">${article.subtitle}</p>
+        <!--<p class="description">${article.subtitle}</p>-->
         <p class="meta">
             <span
                 title=${'Comments for ' + article.title}

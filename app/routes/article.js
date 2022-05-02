@@ -184,7 +184,6 @@ export const Article = ({ state, dispatch }) => {
             </main>
         </div>`
 }
-=======
 import { html, useEffect } from '../lib/htm-preact.js'
 import { Menu } from '../components/layout/menu.js'
 import { blocksStyles } from '../styles/blocks.js'

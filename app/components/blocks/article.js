@@ -2,7 +2,6 @@ import { html } from '../../lib/htm-preact.js'
 import { avoidReload } from '../../utils/avoidReload.js'
 import prefixUriIfNeeded from '../../utils/prefixUriIfNeeded.js'
 
-console.log(window.location.protocol + '//'+ document.domain + "/" + location.pathname.split('/')[1]);
 export const Article = ({ article, category }) => html`
     <style>
         article {
@@ -87,8 +86,8 @@ export const Article = ({ article, category }) => html`
         <p class="meta">
             <span
                 title=${'Comments for ' + article.title}
-                data-disqus-url=${window.location.protocol + document.domain + "/" 
-                + location.pathname.split('/')[1] +
+                data-disqus-url=${window.location.protocol +
+                window.location.hostname +
                 article.uri}
                 data-disqus-identifier=${article.id}
                 class="disqus-comment-count"

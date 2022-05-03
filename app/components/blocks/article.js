@@ -87,7 +87,7 @@ export const Article = ({ article, category }) => html`
             <span
                 title=${'Comments for ' + article.title}
                 data-disqus-url=${window.location.protocol +
-                window.location.hostname +
+                window.location.hostname + window.location.pathname +
                 article.uri}
                 data-disqus-identifier=${article.id}
                 class="disqus-comment-count"

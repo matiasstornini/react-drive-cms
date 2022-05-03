@@ -2,6 +2,7 @@ import { html } from '../../lib/htm-preact.js'
 import { avoidReload } from '../../utils/avoidReload.js'
 import prefixUriIfNeeded from '../../utils/prefixUriIfNeeded.js'
 
+console.log(window.location.protocol + '//'+ document.domain + "/" + location.pathname.split('/')[1]);
 export const Article = ({ article, category }) => html`
     <style>
         article {

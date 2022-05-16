@@ -42,7 +42,7 @@ export const Article = ({ state, dispatch }) => {
     
         default:
           console.log('URL!');
-          //window.top.location.href = url;
+          window.top.location.href = url;
         break;
     }
      

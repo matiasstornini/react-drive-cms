@@ -3,6 +3,7 @@ import { to } from '../../utils/to.js'
 
 const conf = window.appConf
 const DISQUS_COUNT_URL = `https://${conf.shortname}.disqus.com/count.js`
+console.log(conf.shortname);
 
 export const DisqusCount = ({ categories }) => {
     const [disqusCountScript, setDisqusCountScript] = useState(null)

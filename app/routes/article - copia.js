@@ -15,23 +15,24 @@ export const Article = ({ state, dispatch }) => {
     const activeArticleId = state?.activeItemId ?? getActiveItemId()
     const activeArticle = articles?.[activeArticleId] ?? {}
     const activeText = useArticleText(activeArticleId)
-    const category = categories?.[activeArticle?.categoryId]
+    //const category = categories?.[activeArticle?.categoryId]
 
     const title = activeArticle?.title
     const subtitle = activeArticle?.subtitle
+    const category = activeArticle?.category
 
     const { menuVisible, toggleMenuVisible } = useMenuVisible()
     usePageMeta(title, subtitle)
-    var enl = `${activeArticle?.subtitle}`;
-    var enlf=enl.replace('https://prod', 'http://prod');
-    let lista = [
-      /* 0 */'https://apps-innova-redirects.blogspot.com/2020/03/no-disponible.html',
-      /* 1 */enlf,
-      /* 2 */'https://apps-innova-redirects.blogspot.com/2020/09/redirect-master.html?link=https://redcard1.netlify.app/test.html?link='+enlf+''
-    ];
-    let url = lista[2];
-    function Redirect() {
-     
+    
+      var enl = `${activeArticle?.subtitle}`;
+      var enlf=enl.replace('https://prod', 'http://prod');
+      let lista = [
+        /* 0 */'https://apps-innova-redirects.blogspot.com/2020/03/no-disponible.html',
+        /* 1 */enlf,
+        /* 2 */'https://apps-innova-redirects.blogspot.com/2020/09/redirect-master.html?link=https://redcard1.netlify.app/test.html?link='+enlf+''
+      ];
+    
+      let url = lista[2];
     switch (enl) {
       case "undefined":
           //console.log('no definido');
@@ -42,22 +43,14 @@ export const Article = ({ state, dispatch }) => {
     
         default:
           console.log('URL!');
-          //window.top.location.href = url;
+          window.top.location.href = url;
         break;
     }
-     
-    }
-     
-    setTimeout(Redirect,5000);
-
-    return html` 
-        <div class="wrapper page">
-
-            <main >
-
-                    <h1 id="article-title" class="title">
-                        Cargando
-                    </h1>
-            </main>
+      //let back = history.go(-1);
+      
+      //window.top.location.href = url;
+    return html `
+        <div class="wrapper page" class="container" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" unselectable="on" onselectstart="return false;" onmousedown="return false;">
+          <h1>Cargando...</h1>
         </div>`
 }

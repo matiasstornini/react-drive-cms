@@ -4,6 +4,7 @@ import { to } from '../../utils/to.js'
 const conf = window.appConf
 const DISQUS_THREAD_URL = `//${conf.shortname}.disqus.com/embed.js`
 
+
 export const DisqusThread = ({ articleId, articleTitle }) => {
     const [disqusThreadScript, setDisqusThreadScript] = useState(null)
 

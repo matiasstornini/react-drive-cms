@@ -6,7 +6,7 @@ export default function prefixUriIfNeeded(uri) {
         return ''
     }
     const base = window.location.origin
-    uri = uri.startsWith(base) ? uri : base + "/react-drive-cms" +  uri
+    uri = uri.startsWith(base) ? uri : base + uri
     const root = `/${conf.root}`
 
     const shouldIncludeRoot = !base.includes('localhost')

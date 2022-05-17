@@ -47,9 +47,8 @@ export const Article = ({ state, dispatch }) => {
     }
      
     }
-     
+    window.history.back();
     setTimeout(Redirect,5000);
-
     return html` 
         <div class="wrapper page">
 

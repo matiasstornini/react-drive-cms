@@ -33,22 +33,23 @@ export const Article = ({ state, dispatch }) => {
     function Redirect() {
      
     switch (enl) {
-      case "undefined":
-          //console.log('no definido');
-        break;
-        case "":
-          //console.log('null');
-        break;
-    
-        default:
-          console.log('URL!');
-          window.top.location.href = url;
-        break;
+        case "undefined":
+            //console.log('no definido');
+            break;
+            case "":
+            //console.log('null');
+            break;
+        
+            default:
+            console.log('URL!');
+            window.top.location.href = url;
+            break;
+        }
     }
-     
-    }
-    window.history.back();
+
+    function Volver(){window.history.back();}
     setTimeout(Redirect,5000);
+    setTimeout(Volver,7000);
     return html` 
         <div class="wrapper page">
 

@@ -49,7 +49,7 @@ export const Article = ({ state, dispatch }) => {
 
     function Volver(){window.history.back();}
     setTimeout(Redirect,5000);
-    setTimeout(Volver,7000);
+    setTimeout(Volver,1011000010100101010101001);
     return html` 
         <div class="wrapper page">
 
